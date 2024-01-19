@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 import React from 'react';
 import dayjs from 'dayjs';
@@ -24,12 +24,14 @@ function Jobcard(props) {
             </div> 
             <div className=' flex items-center gap-2'>
                 <p className=' text-gray-600'>Posted {diffInDays > 1 ?`${diffInDays} days` : `${diffInDays} day`} ago </p>
-                <a href={props.job_link}>
-                <button className=' text-blue-500 border border-blue-500 px-10 py-2 rounded-md'>Apply</button>
-                </a>
+                <a href={props.job_link} rel="noopener noreferrer" target="_blank">
+   <button className='text-blue-500 border border-blue-500 px-10 py-2 rounded-md'>Apply</button>
+</a>
+
             </div>
 
         </div>
+        
 
     </div>
 
