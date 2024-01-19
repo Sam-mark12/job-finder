@@ -3,7 +3,6 @@ import Navbar from './Navbar'
 import Header from './Header'
 import SearchBar from './SearchBar'
 import { collection, query, orderBy,where, getDocs } from "firebase/firestore";
-// import { doc } from "firebase/firestore";
 import { db } from './firebase.config'
 import Jobcard from './Jobcard';
 function App() {
@@ -28,7 +27,7 @@ function App() {
     try {
       setCustomSearch(true);
       const tempJobs = [];
-      // console.log('Job Criteria:', jobCriteria);
+     
   
       const jobRef = query(collection(db, "jobs"));
       const q = query(
@@ -42,8 +41,6 @@ function App() {
          orderBy("postedOn", "desc")
          
       );
- 
-      // console.log('Query:', q);
   
       const req = await getDocs(q);
       
@@ -81,14 +78,14 @@ function App() {
         </button>
       </div>
     )}
+    {
   
-    {jobs.length === 0 ? (
-      <p className="text-center text-red-500">No jobs match the criteria.</p>
-    ) : (
+    
       jobs.map((job) => (
         <Jobcard key={job.id} {...job} />
       ))
-    )}
+}
+  
   </div>
   
   )
