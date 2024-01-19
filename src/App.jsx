@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import Header from './Header'
 import SearchBar from './SearchBar'
-import Jobcard from './Jobcard'
 import { collection, query, orderBy,where, getDocs } from "firebase/firestore";
 // import { doc } from "firebase/firestore";
 import { db } from './firebase.config'
+import Jobcard from './Jobcard'
 function App() {
    const [jobs, setJobs ] = useState([]);
    const [customSearch,setCustomSearch] = useState(false)
