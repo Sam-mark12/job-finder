@@ -2,11 +2,8 @@ import React from 'react';
 import dayjs from 'dayjs';
 
 function Jobcard(props) {
-//   const skills = ['reactjs', 'nodejs', 'nextjs'];
-// console.log(props.postedOn);
   const date1 = dayjs(new Date());
   const diffInDays = date1.diff(props.postedOn, 'day');
-//   console.log(diffInDays);
 
   return (
     <div className='mx-40 mb-4 mt-20 '>
