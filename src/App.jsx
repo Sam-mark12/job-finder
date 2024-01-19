@@ -5,7 +5,7 @@ import SearchBar from './SearchBar'
 import { collection, query, orderBy,where, getDocs } from "firebase/firestore";
 // import { doc } from "firebase/firestore";
 import { db } from './firebase.config'
-import Jobcard from './Jobcard'
+import Jobcard from './Jobcard';
 function App() {
    const [jobs, setJobs ] = useState([]);
    const [customSearch,setCustomSearch] = useState(false)

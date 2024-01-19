@@ -1,3 +1,5 @@
+import React from 'react'
+
 import React from 'react';
 import dayjs from 'dayjs';
 
@@ -34,4 +36,4 @@ function Jobcard(props) {
   )
 }
 
-export default Jobcard;
+export default Jobcard
